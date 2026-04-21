@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Cadastro de Usuário</h1>
+</header>
+
+<main>
+    <form id="formCadastro">
+
+        <div class="campo">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" required placeholder="Digite seu nome">
+            <span class="erro">Nome é obrigatório</span>
+        </div>
+
+        <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required placeholder="Digite seu email">
+            <span class="erro">Digite um e-mail válido</span>
+        </div>
+
+        <div class="campo">
+            <label for="data">Data de Nascimento</label>
+            <input type="date" id="data" required>
+        </div>
+
+        <div class="campo">
+            <label>Gênero</label>
+            <div class="genero">
+                <label><input type="radio" name="genero" required> Masculino</label>
+                <label><input type="radio" name="genero"> Feminino</label>
+                <label><input type="radio" name="genero"> Outros</label>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" required minlength="6" placeholder="Mínimo 6 caracteres">
+            <span class="erro">Senha deve ter no mínimo 6 caracteres</span>
+        </div>
+
+        <div class="campo">
+            <label for="confirmar">Confirmar Senha</label>
+            <input type="password" id="confirmar" required minlength="6">
+            <span class="erro">As senhas devem ser iguais</span>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+
+    </form>
+</main>
+
+<footer>
+    <p>© 2026 - Sistema de Cadastro</p>
+</footer>
+
+
+<div id="modal" class="modal">
+    <div class="modal-conteudo">
+        <h2>Cadastro realizado!</h2>
+        <p>Seu cadastro foi feito com sucesso 🎉</p>
+        <button id="fecharModal">Fechar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
